@@ -18,7 +18,6 @@ This script demonstrates the core logic of the Delay-Tolerant Mesh:
 2. Asynchronous Encryption (NaCl/Sodium)
 3. Epidemic Syncing (Bloom Filters)
 """
- 
 import json
 import time
 import random
@@ -29,11 +28,9 @@ import nacl.signing
 import nacl.encoding
 from nacl.public import PrivateKey, Box
 from pybloom_live import BloomFilter
- 
 # --- CONFIGURATION ---
 NODE_CAPACITY = 1000  # Max messages to track in bloom filter
 FALSE_POSITIVE_RATE = 0.001
- 
 class Message:
     def __init__(self, sender_id, content, timestamp=None):
         self.sender_id = sender_id
